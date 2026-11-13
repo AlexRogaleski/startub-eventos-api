@@ -9,7 +9,7 @@ class Inscricao extends Model
 {
     protected $table = 'inscricoes';
     
-    protected $fillable = ['nome', 'email', 'cpf', 'status'];
+    protected $fillable = ['user_id', 'nome', 'email', 'cpf', 'status'];
     
     public function evento(): BelongsTo
     {

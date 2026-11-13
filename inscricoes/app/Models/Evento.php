@@ -15,6 +15,7 @@ class Evento extends Model
             'data' => 'datetime:Y-m-d H:i',
             'vagas' => 'integer',
             'valor' => 'decimal:2',
+            'user_id' => 'integer',
         ];
     }
 

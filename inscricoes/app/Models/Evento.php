@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Evento extends Model
 {
@@ -15,5 +16,10 @@ class Evento extends Model
             'vagas' => 'integer',
             'valor' => 'decimal:2',
         ];
+    }
+
+    public function inscricoes(): HasMany
+    {
+        return $this->hasMany(Inscricao::class);
     }
 }

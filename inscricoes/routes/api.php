@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AsaasWebhookController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventoController;
 use App\Http\Controllers\InscricaoController;
@@ -26,3 +27,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/eventos/{evento}/inscricoes', [InscricaoController::class, 'store']);
     Route::get('/inscricoes/{inscricao}', [InscricaoController::class, 'show']);
 });
+
+Route::post('/webhooks/asaas', AsaasWebhookController::class);
